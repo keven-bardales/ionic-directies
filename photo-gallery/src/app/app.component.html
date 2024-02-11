@@ -1,0 +1,30 @@
+<ion-content>
+  <div [ngClass]="score > 69 ? 'aprobado' : 'reprobado'">
+    El resultado es {{ score > 69 ? "Aprobado" : "Reprobado" }}
+  </div>
+  <app-contador></app-contador>
+  <ion-input
+    [(ngModel)]="phoneNumber"
+    placeholder="Número de teléfono"
+  ></ion-input>
+
+  <ion-content>
+    <ion-label [ngStyle]="{ color: textColor }"
+      >Texto con color dinámico</ion-label
+    > </ion-content
+  >3
+
+  <div [ngSwitch]="colorButton">
+    <ion-button *ngSwitchCase="'primary'">Primary Button</ion-button>
+    <ion-button *ngSwitchCase="'dark'">Dark Button</ion-button>
+    <ion-button *ngSwitchCase="'danger'">Danger Button</ion-button>
+  </div>
+
+  <app-contador></app-contador>
+
+  <ion-list>
+    <ion-item *ngFor="let name of names">
+      {{ name }}
+    </ion-item>
+  </ion-list>
+</ion-content>
